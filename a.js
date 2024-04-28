@@ -11,5 +11,9 @@ function onDeviceReady() {
             console.log("Campaign = " + attribution.campaign);
         });
         Adjust.create(adjustConfig);
+    
+        installReferrer.getReferrer(function(attr) {
+                                                console.log("Network = " + attr.utm_medium);
+                                            }, null);
 }
 
